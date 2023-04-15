@@ -1,0 +1,223 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Roboto Condensed', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+  }
+  
+.banner{
+    background-image: url(../Image/hero-bg.jpg);
+    height: 100vh;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    
+}
+.navbar-brand, .nav-link{
+    color: white;
+    font-weight: 700;
+}
+.nav-link{
+    text-transform: uppercase;
+    position: relative;
+    margin-left: 20px;
+}
+.navbar{
+    /* height: 100px; */
+    padding: 15px 0px;
+    background-color: #040404de;
+}
+.active::after{
+    content: " ";
+    position:absolute;
+    top: 40px;
+    height: 3px;
+    width: 90% !important;
+    /* color: white !important; */
+    background-color: white;
+    left: 5px;
+    transition: 0.5s;
+}
+.nav-link::after{
+    content: " ";
+    position:absolute;
+    top: 40px;
+    height: 3px;
+    width: 0%;
+    /* color: white !important; */
+    background-color: white;
+    left: 5px;
+    transition: 0.5s;
+}
+.nav-link:hover::after{
+    width: 90%;
+}
+.overlay{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.576);
+    padding-top:45vh;
+}
+.skill-container{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+.about-description{
+    text-align: justify;
+}
+.header-title li{
+    list-style: none;
+    font-size: 40px;
+    text-align: left;
+    margin-bottom: 10px;
+    position: relative;
+    top: 0%;
+    right: -45%;
+    animation: slide 9s steps(4) infinite;
+}
+/* @keyframes slide {
+    100%{
+        top: -150px
+    }
+}
+@keyframes typing {
+    100%{
+        left: 120%;
+        margin: 0px -35px 0 35;
+    }
+} */
+.header-title{
+    overflow: hidden;
+    /* line-height: 40px; */
+    height: 30px;
+}
+.header-title li span::after{
+    content: " ";
+    position: absolute;
+    left: 0;
+    top:5%;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    animation: typing 2.1s steps(9) infinite;
+    border-left: 1px solid red;
+}
+.header-title li span{
+    position: relative;
+}
+
+/* services */
+.icon{
+    text-align: center;
+}
+.icon span{
+    border: 10px solid #419aff;
+    display: inline-block;
+    padding: 30px;
+    border-radius: 50%;
+    margin-top: 20px;
+    transition: 0.5s;
+    
+}
+.card{
+    border: 0px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding-bottom: 20px;
+    /* text-align: justify; */
+}
+.card:hover .icon span{
+    background-color: #419aff;
+    color: white;
+    border: 10px solid #93bceb;
+}
+.experience-section{
+    height: auto;
+    background-image: url('../Image/counters-bg.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:50px 0px;
+}
+.experience-overlay{
+    background-color: #1371dca7;
+    padding: 120px 0px;
+    height: 100%;
+    width: 100%;
+}
+.experience-overlay span{
+    /* border: 5px solid white; */
+    border: 10px solid #cde1f8;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 50%;
+    /* border-radius: 50%; */
+}
+.experience-overlay span svg{
+    height: 30px;
+    width: 30px;
+    font-weight: 700;
+    color: white;
+}
+.experience-overlay h3{
+   
+    color: white;
+    margin: 10px 0px;
+}
+.experience-overlay p{
+   
+    color: white;
+    margin-bottom: 50px;
+}
+.portfolio-secton .card{
+    border-radius: 0px;
+}
+.portfolio-secton .card-body span{
+    color: #419aff;
+}
+.plus-icon{
+    color: #419aff;
+    cursor: pointer;
+}
+.card img{
+    transition: 1s;
+}
+.card-img{
+    overflow: hidden;
+    
+}
+.portfolio-secton .card:hover img{
+    transform: scale(1.3);
+    
+}
+.progress{
+    height: 10px; 
+    border-radius: 0px !important;
+}
+
+
+.carousel-bg{
+    background-image: linear-gradient(rgba(87, 205, 248, 0.4), rgba(64, 80, 205, 0.4)),url('../Image/overlay-bg.jpg'); 
+    background-size: cover;
+	background-attachment: fixed;
+	min-height: 50vh;
+}
+.item{
+	text-align: center;
+}
+
+.item img{
+	margin: auto;
+	width: 150px!important;
+	height: 150px!important;
+	border-radius: 150px;
+    margin: 50px auto;
+}
+.owl-theme .active::after{
+    display: none;
+}
